@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.github.double-bin</groupId>
+        <artifactId>springfox-bridge-parent</artifactId>
+        <version>1.1.1</version>
+    </parent>
+
+    <artifactId>springfox-bridge-spring-boot-starter</artifactId>
+    <version>${springfox-bridge.version}</version>
+    <packaging>jar</packaging>
+    <name>springfox-bridge-spring-boot-starter</name>
+    <description>A plugin to create swagger documents for no restful apis in spring based applications.</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.github.double-bin</groupId>
+            <artifactId>springfox-bridge-core</artifactId>
+            <version>${springfox-bridge.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
