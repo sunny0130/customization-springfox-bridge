@@ -37,7 +37,7 @@ public class DemoApplication {
     {
         return new ApiInfoBuilder().title("Restful apis for needle service.")
             .description("Needle service apis")
-            .termsOfServiceUrl("http://doublebin.site/")
+            .termsOfServiceUrl("http://sunny0130.customization.site/")
             .contact("lubinbin")
             .version("1.0")
             .build();

@@ -131,14 +131,14 @@ public class BridgeControllerBuilder {
 
                         body += "return this.bean." + methodName + "($1";
                     } else {
-                        body += "java.lang.String jsonStr = com.github.doublebin.springfox.bridge.core.util.JsonUtil.writeValueAsString($1);";
+                        body += "java.lang.String jsonStr = com.github.sunny0130.customization.springfox.bridge.core.util.JsonUtil.writeValueAsString($1);";
 
 
-                        body += "Object orignalRequestValue = com.github.doublebin.springfox.bridge.core.util.JsonUtil.readValue(jsonStr,parameters[0].getParameterizedType());";
+                        body += "Object orignalRequestValue = com.github.sunny0130.customization.springfox.bridge.core.util.JsonUtil.readValue(jsonStr,parameters[0].getParameterizedType());";
 
                     /*  body += getObjectCreateBody(parameterClassess.get(0), "requestValue")
                             + getArrayCreateBody(parameterClassess.get(0), "requestValues", "requestValue")
-                            + "com.github.doublebin.springfox.bridge.core.util.JsonUtil.copyValue(orignalRequestValue, requestValues);";*/
+                            + "com.github.sunny0130.customization.springfox.bridge.core.util.JsonUtil.copyValue(orignalRequestValue, requestValues);";*/
 
                         body += parameters[0].getType().getName() + " requestValue"  + " = (" + parameters[0].getType().getName()+")orignalRequestValue" + ";";
 
@@ -171,7 +171,7 @@ public class BridgeControllerBuilder {
                         if (parameters[i].getParameterizedType() instanceof Class) {
 
                         } else {
-                            body += "jsonStrs[" + i + "]=com.github.doublebin.springfox.bridge.core.util.JsonUtil.writeValueAsString($1.getParam" + i + "());";
+                            body += "jsonStrs[" + i + "]=com.github.sunny0130.customization.springfox.bridge.core.util.JsonUtil.writeValueAsString($1.getParam" + i + "());";
                         }
 
                     }
@@ -190,11 +190,11 @@ public class BridgeControllerBuilder {
                             body +=parameters[i].getType().getName() + " requestValue" + i + "=$1.getParam" + i + "();";
 
                         } else {
-                            body += "Object orignalRequestValue" + i + " = com.github.doublebin.springfox.bridge.core.util.JsonUtil.readValue(jsonStrs[" + i + "],parameters[" + i + "].getParameterizedType());";
+                            body += "Object orignalRequestValue" + i + " = com.github.sunny0130.customization.springfox.bridge.core.util.JsonUtil.readValue(jsonStrs[" + i + "],parameters[" + i + "].getParameterizedType());";
 
                           /*  body += getObjectCreateBody(parameterClassess.get(i), "requestValue" + i)
                                     + getArrayCreateBody(parameterClassess.get(i), "requestValues" + i, "requestValue" + i)
-                                    + "com.github.doublebin.springfox.bridge.core.util.JsonUtil.copyValue(orignalRequestValue" + i + ", requestValues" + i + ");";*/
+                                    + "com.github.sunny0130.customization.springfox.bridge.core.util.JsonUtil.copyValue(orignalRequestValue" + i + ", requestValues" + i + ");";*/
 
                             body += parameters[i].getType().getName() + " requestValue" +i + " = (" + parameters[i].getType().getName()+")orignalRequestValue" +i+ ";";
                         }
@@ -251,14 +251,14 @@ public class BridgeControllerBuilder {
                     if (parameters[0].getParameterizedType() instanceof Class) {
                         body += "Object orignalValue = this.bean." + methodName + "($1";
                     } else {
-                        body += "java.lang.String jsonStr = com.github.doublebin.springfox.bridge.core.util.JsonUtil.writeValueAsString($1);";
+                        body += "java.lang.String jsonStr = com.github.sunny0130.customization.springfox.bridge.core.util.JsonUtil.writeValueAsString($1);";
 
 
-                        body += "Object orignalRequestValue = com.github.doublebin.springfox.bridge.core.util.JsonUtil.readValue(jsonStr,parameters[0].getParameterizedType());";
+                        body += "Object orignalRequestValue = com.github.sunny0130.customization.springfox.bridge.core.util.JsonUtil.readValue(jsonStr,parameters[0].getParameterizedType());";
 
                    /* body += getObjectCreateBody(parameterClassess.get(0), "requestValue")
                             + getArrayCreateBody(parameterClassess.get(0), "requestValues", "requestValue")
-                            + "com.github.doublebin.springfox.bridge.core.util.JsonUtil.copyValue(orignalRequestValue, requestValues);";*/
+                            + "com.github.sunny0130.customization.springfox.bridge.core.util.JsonUtil.copyValue(orignalRequestValue, requestValues);";*/
 
                         body += parameters[0].getType().getName() + " requestValue"  + " = (" + parameters[0].getType().getName()+")orignalRequestValue" + ";";
 
@@ -291,7 +291,7 @@ public class BridgeControllerBuilder {
                         if (parameters[i].getParameterizedType() instanceof Class) {
 
                         } else {
-                            body += "jsonStrs[" + i + "]=com.github.doublebin.springfox.bridge.core.util.JsonUtil.writeValueAsString($1.getParam" + i + "());";
+                            body += "jsonStrs[" + i + "]=com.github.sunny0130.customization.springfox.bridge.core.util.JsonUtil.writeValueAsString($1.getParam" + i + "());";
                         }
 
                     }
@@ -310,14 +310,14 @@ public class BridgeControllerBuilder {
                             body +=parameters[i].getType().getName() + " requestValue" + i + "=$1.getParam" + i + "();";
 
                         } else {
-                            body += "Object orignalRequestValue" + i + " = com.github.doublebin.springfox.bridge.core.util.JsonUtil.readValue(jsonStrs[" + i + "],parameters[" + i + "].getParameterizedType());";
+                            body += "Object orignalRequestValue" + i + " = com.github.sunny0130.customization.springfox.bridge.core.util.JsonUtil.readValue(jsonStrs[" + i + "],parameters[" + i + "].getParameterizedType());";
 
 
                             body += parameters[i].getType().getName() + " requestValue" +i + " = (" + parameters[i].getType().getName()+")orignalRequestValue" +i+ ";";
 
                             /*body += getObjectCreateBody(parameterClassess.get(i), "requestValue" + i)
                                     + getArrayCreateBody(parameterClassess.get(i), "requestValues" + i, "requestValue" + i)
-                                    + "com.github.doublebin.springfox.bridge.core.util.JsonUtil.copyValue(orignalRequestValue" + i + ", requestValues" + i + ");";*/
+                                    + "com.github.sunny0130.customization.springfox.bridge.core.util.JsonUtil.copyValue(orignalRequestValue" + i + ", requestValues" + i + ");";*/
                         }
 
 
@@ -343,7 +343,7 @@ public class BridgeControllerBuilder {
                 body += ");"
                         + getObjectCreateBody(newReplaceClass, "objectValue")
                         + getArrayCreateBody(newReplaceClass, "objectValues", "objectValue")
-                        + "com.github.doublebin.springfox.bridge.core.util.JsonUtil.copyValue(orignalValue, objectValues);"
+                        + "com.github.sunny0130.customization.springfox.bridge.core.util.JsonUtil.copyValue(orignalValue, objectValues);"
                         + "return objectValues[0];"
                         + "}";
 

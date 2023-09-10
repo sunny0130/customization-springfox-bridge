@@ -13,7 +13,7 @@ import java.lang.reflect.Field;
 import java.util.Arrays;
 import java.util.Set;
 
-@SupportedAnnotationTypes("com.github.doublebin.springfox.bridge.core.builder.annotations.BridgeApi")
+@SupportedAnnotationTypes("com.github.sunny0130.customization.springfox.bridge.core.builder.annotations.BridgeApi")
 @SupportedSourceVersion(SourceVersion.RELEASE_8)
 @Slf4j
 public class AProcessor extends AbstractProcessor {
