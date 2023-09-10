@@ -3,11 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.springfox</groupId>
+    <groupId>io.springfox.customization</groupId>
     <artifactId>customization-springfox-bridge-parent</artifactId>
     <version>1.0.9</version>
     <packaging>pom</packaging>
-
 
 
     <licenses>
@@ -24,7 +23,6 @@
         <java.version>1.8</java.version>
         <org.springframework.version>4.3.19.RELEASE</org.springframework.version>
         <springfox.version>2.7.0</springfox.version>
-        <springfox-bridge.version>1.0.9</springfox-bridge.version>
     </properties>
 
     <modules>

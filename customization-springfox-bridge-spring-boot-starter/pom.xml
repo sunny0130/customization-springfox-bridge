@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>io.springfox</groupId>
+        <groupId>io.springfox.customization</groupId>
         <artifactId>customization-springfox-bridge-parent</artifactId>
         <version>1.0.9</version>
     </parent>
@@ -18,7 +18,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>io.springfox</groupId>
+            <groupId>io.springfox.customization</groupId>
             <artifactId>customization-springfox-bridge</artifactId>
             <version>${springfox-bridge.version}</version>
         </dependency>

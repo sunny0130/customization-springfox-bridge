@@ -1,9 +1,0 @@
-server.port: 2222
-server.context-path: /bridge
-
-spring.application.name: bridge-demo
-
-spring:
-  mvc:
-    pathmatch:
-      matching-strategy: ANT_PATH_MATCHER
